@@ -8,9 +8,9 @@ export const Route = createFileRoute("/difference")({
   component: DifferencePage,
   head: () => ({
     meta: [
-      { title: "Time Difference Calculator — Hourly.in" },
+      { title: "Time Difference Calculator — WorldClockly.com" },
       { name: "description", content: "Compare time between any two cities in the world. India vs USA, India vs UK, and any timezone pair, instantly." },
-      { property: "og:title", content: "Time Difference Calculator — Hourly.in" },
+      { property: "og:title", content: "Time Difference Calculator — WorldClockly.com" },
       { property: "og:description", content: "Compare time across cities worldwide in real time." },
     ],
     links: [{ rel: "canonical", href: "/difference" }],
