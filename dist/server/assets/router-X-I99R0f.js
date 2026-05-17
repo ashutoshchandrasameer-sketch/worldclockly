@@ -3,7 +3,7 @@ import { Link, createRootRouteWithContext, useRouter, Outlet, HeadContent, Scrip
 import { jsx, jsxs } from "react/jsx-runtime";
 import { Clock3, Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
-const appCss = "/assets/styles-xCV8jv-z.css";
+const appCss = "/assets/styles-D28eWm1n.css";
 function useTheme() {
   const [theme, setTheme] = useState(() => {
     if (typeof window === "undefined") return "dark";
@@ -751,7 +751,7 @@ const HOLIDAYS = {
     ]
   }
 };
-const $$splitComponentImporter$5 = () => import("./holidays-pCRvzp8n.js");
+const $$splitComponentImporter$5 = () => import("./holidays-DGIxpBFK.js");
 const Route$5 = createFileRoute("/holidays")({
   component: lazyRouteComponent($$splitComponentImporter$5, "component"),
   head: () => ({
@@ -844,7 +844,7 @@ const Route$3 = createFileRoute("/countdown")({
     }]
   })
 });
-const $$splitComponentImporter$2 = () => import("./index-LwOIG4pZ.js");
+const $$splitComponentImporter$2 = () => import("./index-BY-ccqaB.js");
 const Route$2 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component"),
   head: () => ({
@@ -884,7 +884,7 @@ const Route$2 = createFileRoute("/")({
   })
 });
 const $$splitNotFoundComponentImporter$1 = () => import("./countries._country-BLh8NGIF.js");
-const $$splitComponentImporter$1 = () => import("./countries._country-Hoddvy1T.js");
+const $$splitComponentImporter$1 = () => import("./countries._country-B409cqQh.js");
 const Route$1 = createFileRoute("/countries/$country")({
   loader: ({
     params
@@ -994,7 +994,7 @@ const Route$1 = createFileRoute("/countries/$country")({
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter$1, "notFoundComponent")
 });
 const $$splitNotFoundComponentImporter = () => import("./cities._city-Cjw98d3P.js");
-const $$splitComponentImporter = () => import("./cities._city-Dnjeaj11.js");
+const $$splitComponentImporter = () => import("./cities._city-DHu5VAEI.js");
 const Route = createFileRoute("/cities/$city")({
   loader: ({
     params

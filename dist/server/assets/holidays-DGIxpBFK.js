@@ -1,7 +1,7 @@
 import { jsxs, jsx } from "react/jsx-runtime";
 import { useState, useMemo } from "react";
 import { u as useNow } from "./use-now-lQUalFFF.js";
-import { H as HOLIDAYS } from "./router-BfuBUzMw.js";
+import { H as HOLIDAYS } from "./router-X-I99R0f.js";
 import "@tanstack/react-query";
 import "@tanstack/react-router";
 import "lucide-react";

@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { Globe2, Search, MapPin, Sunrise, Sunset } from "lucide-react";
 import { u as useNow } from "./use-now-lQUalFFF.js";
 import { a as getTimeInZone, g as getOffsetMinutes, T as TIMEZONES, f as formatOffset } from "./timezones-CdSu_6TQ.js";
-import { C as CITIES, s as slugifyCity } from "./router-BfuBUzMw.js";
+import { C as CITIES, s as slugifyCity } from "./router-X-I99R0f.js";
 import { A as AnimatedGlobe } from "./animated-globe-9wmd9Ebj.js";
 import "@tanstack/react-query";
 import "d3-geo";

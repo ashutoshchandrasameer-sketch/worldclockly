@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { ArrowLeft, Check, Share2, Globe2, MapPin, Sunrise, Sunset } from "lucide-react";
 import { u as useNow } from "./use-now-lQUalFFF.js";
-import { b as Route, C as CITIES } from "./router-BfuBUzMw.js";
+import { b as Route, C as CITIES } from "./router-X-I99R0f.js";
 import { a as getTimeInZone, g as getOffsetMinutes, f as formatOffset } from "./timezones-CdSu_6TQ.js";
 import { A as AnimatedGlobe } from "./animated-globe-9wmd9Ebj.js";
 import "@tanstack/react-query";
