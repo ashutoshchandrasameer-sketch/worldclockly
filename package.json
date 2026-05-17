@@ -4,11 +4,9 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-  "dev": "vite dev",
-  "build:client": "vite build",
-  "build:server": "vite build --outDir dist/server",
-  "build": "npm run build:client && npm run build:server",
-  "start": "node dist/server/server.js",
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
   "lint": "eslint .",
   "format": "prettier --write ."
   },
