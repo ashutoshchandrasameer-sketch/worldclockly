@@ -1,7 +1,8 @@
 node_modules
-dist
-*.log
 *.env
-*.local
+dist
+coverage
+*.log
 .DS_Store
+.idea   
 .vscode
