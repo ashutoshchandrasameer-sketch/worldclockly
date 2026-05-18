@@ -46,6 +46,8 @@ export const CITIES: CityInfo[] = [
 { slug: "kuala-lumpur", city: "Kuala Lumpur", country: "Malaysia", countryCode: "MY", tz: "Asia/Kuala_Lumpur", flag: "🇲🇾", lat: 3.139, lon: 101.6869, population: 8000000 },
 { slug: "penang", city: "Penang", country: "Malaysia", countryCode: "MY", tz: "Asia/Kuala_Lumpur", flag: "🇲🇾", lat: 5.4164, lon: 100.3327, population: 1800000 },
 
+{ slug: "dhaka",city: "Dhaka",country:"Bangladesh",countryCode:"BD",tz:"Asia/Dhaka",flag:"🇧🇩",lat:23.8103,lon:90.4125,population:8900000,about:"Capital of Bangladesh and major economic center." },
+
 { slug: "doha", city: "Doha", country: "Qatar", countryCode: "QA", tz: "Asia/Qatar", flag: "🇶🇦", lat: 25.2854, lon: 51.531 },
 { slug: "kuwait-city", city: "Kuwait City", country: "Kuwait", countryCode: "KW", tz: "Asia/Kuwait", flag: "🇰🇼", lat: 29.3759, lon: 47.9774 },
 
@@ -113,7 +115,9 @@ export const CITIES: CityInfo[] = [
 
 { slug: "san-francisco", city: "San Francisco", country: "USA", countryCode: "US", tz: "America/Los_Angeles", flag: "🇺🇸", lat: 37.7749, lon: -122.4194, population: 4700000 },
 { slug: "toronto", city: "Toronto", country: "Canada", countryCode: "CA", tz: "America/Toronto", flag: "🇨🇦", lat: 43.6532, lon: -79.3832, population: 2930000 },
+
 { slug: "montreal", city: "Montreal", country: "Canada", countryCode: "CA", tz: "America/Toronto", flag: "🇨🇦", lat: 45.5017, lon: -73.5673, population: 1780000 },
+
 { slug: "washington-dc", city: "Washington DC", country: "USA", countryCode: "US", tz: "America/New_York", flag: "🇺🇸", lat: 38.9072, lon: -77.0369, population: 6300000 },
 
 { slug: "boston", city: "Boston", country: "USA", countryCode: "US", tz: "America/New_York", flag: "🇺🇸", lat: 42.3601, lon: -71.0589, population: 4800000 },

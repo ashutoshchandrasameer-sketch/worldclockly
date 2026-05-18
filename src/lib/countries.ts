@@ -29,6 +29,8 @@ export const COUNTRIES: CountryInfo[] = [
 { slug: "norway", name: "Norway", code: "NO", flag: "🇳🇴", primaryTz: "Europe/Oslo", capital: "oslo", about: "Norway uses Central European Time and observes daylight saving time." },
 
 { slug: "finland", name: "Finland", code: "FI", flag: "🇫🇮", primaryTz: "Europe/Helsinki", capital: "helsinki", about: "Finland follows Eastern European Time (EET, UTC+2) and daylight saving in summer." },
+{ 
+  slug: "bangladesh", name: "Bangladesh", code: "BD", flag: "🇧🇩", primaryTz: "Asia/Dhaka", capital: "dhaka", about: "Bangladesh follows Bangladesh Standard Time (BST), which is UTC+6 with no daylight saving adjustments." },
 
 { slug: "denmark", name: "Denmark", code: "DK", flag: "🇩🇰", primaryTz: "Europe/Copenhagen", capital: "copenhagen", about: "Denmark uses Central European Time and observes daylight saving time." },
 
