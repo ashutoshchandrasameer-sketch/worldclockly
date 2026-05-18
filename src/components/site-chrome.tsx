@@ -39,7 +39,7 @@ export function SiteFooter() {
               <Clock3 className="h-4 w-4 text-primary" />
               worldClockly<span className="text-primary">.com</span>
             </div>
-            <p className="mt-2 max-w-md">India-first global time platform. Atomic-accurate clocks, world time, holidays and countdowns.</p>
+            <p className="mt-2 max-w-md">Global time platform. Atomic-accurate clocks, world time, holidays and countdowns.</p>
           </div>
           <div className="flex flex-wrap gap-6">
             <Link to="/" className="hover:text-foreground">Clock</Link>

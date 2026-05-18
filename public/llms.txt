@@ -1,6 +1,6 @@
 # worldClockly.com
 
-> India-first world clock and time utility — atomic-accurate Indian Standard Time, world time zones, sunrise/sunset, countdowns, holidays and per-city and per-country time pages.
+> Global world clock and time utility — atomic-accurate Indian Standard Time, world time zones, sunrise/sunset, countdowns, holidays and per-city and per-country time pages.
 
 ## Pages
 
