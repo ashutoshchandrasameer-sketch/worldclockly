@@ -37,9 +37,9 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-2 font-display font-bold text-foreground">
               <Clock3 className="h-4 w-4 text-primary" />
-              worldclockly<span className="text-primary">.com</span>
+              worldClockly<span className="text-primary">.com</span>
             </div>
-            <p className="mt-2 max-w-md">Global time platform. Atomic-accurate clocks, world time converter, holidays and countdowns.</p>
+            <p className="mt-2 max-w-md">India-first global time platform. Atomic-accurate clocks, world time, holidays and countdowns.</p>
           </div>
           <div className="flex flex-wrap gap-6">
             <Link to="/" className="hover:text-foreground">Clock</Link>
@@ -48,7 +48,7 @@ export function SiteFooter() {
             <Link to="/holidays" className="hover:text-foreground">Holidays</Link>
           </div>
         </div>
-        <div className="mt-8 border-t border-border/50 pt-6 text-xs">© {new Date().getFullYear()} WorldClockly.com — Precision time for major countries across the world.</div>
+        <div className="mt-8 border-t border-border/50 pt-6 text-xs">© {new Date().getFullYear()} worldClockly.com — Precision time for India and the world.</div>
       </div>
     </footer>
   );

@@ -1,0 +1,206 @@
+{
+  "%23tanstack-start-plugin-adapters": {
+    "file": "assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js",
+    "name": "__23tanstack-start-plugin-adapters",
+    "src": "%23tanstack-start-plugin-adapters",
+    "isDynamicEntry": true
+  },
+  "C:/Users/techm/Projects/worldclockly/src/styles.css": {
+    "file": "assets/styles-D767Cv5-.css",
+    "src": "C:/Users/techm/Projects/worldclockly/src/styles.css"
+  },
+  "_animated-globe-w_Esn10I.js": {
+    "file": "assets/animated-globe-w_Esn10I.js",
+    "name": "animated-globe",
+    "imports": [
+      "_router-B5j1iYdu.js",
+      "_server-Dl1L1aMT.js"
+    ]
+  },
+  "_arrow-left-B1uSCz45.js": {
+    "file": "assets/arrow-left-B1uSCz45.js",
+    "name": "arrow-left",
+    "imports": [
+      "_router-B5j1iYdu.js"
+    ]
+  },
+  "_map-pin-C2EpkQKf.js": {
+    "file": "assets/map-pin-C2EpkQKf.js",
+    "name": "map-pin",
+    "imports": [
+      "_router-B5j1iYdu.js"
+    ]
+  },
+  "_router-B5j1iYdu.js": {
+    "file": "assets/router-B5j1iYdu.js",
+    "name": "router",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js"
+    ],
+    "dynamicImports": [
+      "src/routes/holidays.tsx?tsr-split=component",
+      "src/routes/difference.tsx?tsr-split=component",
+      "src/routes/countdown.tsx?tsr-split=component",
+      "src/routes/index.tsx?tsr-split=component",
+      "src/routes/countries.$country.tsx?tsr-split=notFoundComponent",
+      "src/routes/countries.$country.tsx?tsr-split=component",
+      "src/routes/cities.$city.tsx?tsr-split=notFoundComponent",
+      "src/routes/cities.$city.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/styles-D767Cv5-.css"
+    ]
+  },
+  "_server-Dl1L1aMT.js": {
+    "file": "assets/server-Dl1L1aMT.js",
+    "name": "server",
+    "isDynamicEntry": true,
+    "dynamicImports": [
+      "tanstack-start-manifest:v",
+      "_router-B5j1iYdu.js",
+      "src/start.ts",
+      "%23tanstack-start-plugin-adapters"
+    ]
+  },
+  "_timezones-Bsv7zqf4.js": {
+    "file": "assets/timezones-Bsv7zqf4.js",
+    "name": "timezones"
+  },
+  "_use-now-B6ZuzukQ.js": {
+    "file": "assets/use-now-B6ZuzukQ.js",
+    "name": "use-now",
+    "imports": [
+      "_server-Dl1L1aMT.js"
+    ]
+  },
+  "_worker-entry-CIwX6y1j.js": {
+    "file": "assets/worker-entry-CIwX6y1j.js",
+    "name": "worker-entry",
+    "dynamicImports": [
+      "_server-Dl1L1aMT.js"
+    ]
+  },
+  "src/routes/cities.$city.tsx?tsr-split=component": {
+    "file": "assets/cities._city-B1i-DtXP.js",
+    "name": "cities._city",
+    "src": "src/routes/cities.$city.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_router-B5j1iYdu.js",
+      "_use-now-B6ZuzukQ.js",
+      "_timezones-Bsv7zqf4.js",
+      "_animated-globe-w_Esn10I.js",
+      "_arrow-left-B1uSCz45.js",
+      "_map-pin-C2EpkQKf.js"
+    ]
+  },
+  "src/routes/cities.$city.tsx?tsr-split=notFoundComponent": {
+    "file": "assets/cities._city-C6DVD4rO.js",
+    "name": "cities._city",
+    "src": "src/routes/cities.$city.tsx?tsr-split=notFoundComponent",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_router-B5j1iYdu.js"
+    ]
+  },
+  "src/routes/countdown.tsx?tsr-split=component": {
+    "file": "assets/countdown-CZCKP_oG.js",
+    "name": "countdown",
+    "src": "src/routes/countdown.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_use-now-B6ZuzukQ.js",
+      "_router-B5j1iYdu.js"
+    ]
+  },
+  "src/routes/countries.$country.tsx?tsr-split=component": {
+    "file": "assets/countries._country-Do8k8j5u.js",
+    "name": "countries._country",
+    "src": "src/routes/countries.$country.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_router-B5j1iYdu.js",
+      "_use-now-B6ZuzukQ.js",
+      "_timezones-Bsv7zqf4.js",
+      "_arrow-left-B1uSCz45.js",
+      "_map-pin-C2EpkQKf.js"
+    ]
+  },
+  "src/routes/countries.$country.tsx?tsr-split=notFoundComponent": {
+    "file": "assets/countries._country-Bua0yBNg.js",
+    "name": "countries._country",
+    "src": "src/routes/countries.$country.tsx?tsr-split=notFoundComponent",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_router-B5j1iYdu.js"
+    ]
+  },
+  "src/routes/difference.tsx?tsr-split=component": {
+    "file": "assets/difference-DQyPg0Ye.js",
+    "name": "difference",
+    "src": "src/routes/difference.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_use-now-B6ZuzukQ.js",
+      "_timezones-Bsv7zqf4.js",
+      "_router-B5j1iYdu.js"
+    ]
+  },
+  "src/routes/holidays.tsx?tsr-split=component": {
+    "file": "assets/holidays-B_YnUbVF.js",
+    "name": "holidays",
+    "src": "src/routes/holidays.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_use-now-B6ZuzukQ.js",
+      "_router-B5j1iYdu.js"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-zAitaTgR.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-Dl1L1aMT.js",
+      "_router-B5j1iYdu.js",
+      "_use-now-B6ZuzukQ.js",
+      "_timezones-Bsv7zqf4.js",
+      "_animated-globe-w_Esn10I.js",
+      "_map-pin-C2EpkQKf.js"
+    ]
+  },
+  "src/start.ts": {
+    "file": "assets/start-BhcZ0kFo.js",
+    "name": "start",
+    "src": "src/start.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-CIwX6y1j.js",
+      "_server-Dl1L1aMT.js"
+    ]
+  },
+  "tanstack-start-manifest:v": {
+    "file": "assets/_tanstack-start-manifest_v-BHHhM9nk.js",
+    "name": "_tanstack-start-manifest_v",
+    "src": "tanstack-start-manifest:v",
+    "isDynamicEntry": true
+  },
+  "virtual:cloudflare/worker-entry": {
+    "file": "index.js",
+    "name": "index",
+    "src": "virtual:cloudflare/worker-entry",
+    "isEntry": true,
+    "imports": [
+      "_worker-entry-CIwX6y1j.js"
+    ]
+  }
+}

@@ -10,9 +10,9 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "WorldClockly - Current Local Time Worldwide" },
-      { name: "description", content: "Atomic-accurate Current Local Time, world clocks, time zones, sunrise/sunset and countdowns. India's most trusted time utility." },
-      { property: "og:title", content: "WorldClockly — Exact Time Now" },
+      { title: "worldClockly.com — Exact Time Now in India & The World" },
+      { name: "description", content: "Atomic-accurate Indian Standard Time, world clocks, time zones, sunrise/sunset and countdowns. India's most trusted time utility." },
+      { property: "og:title", content: "worldClockly.com — Exact Time Now" },
       { property: "og:description", content: "Live IST clock, world time, holidays and countdowns. Fast. Free. Accurate." },
       { property: "og:type", content: "website" },
     ],
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "WorldClockly.com",
+          name: "worldClockly.com",
           url: "https://worldclockly.com/",
           potentialAction: {
             "@type": "SearchAction",

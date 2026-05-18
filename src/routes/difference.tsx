@@ -8,9 +8,9 @@ export const Route = createFileRoute("/difference")({
   component: DifferencePage,
   head: () => ({
     meta: [
-      { title: "Time Difference Calculator — Hourly.in" },
+      { title: "Time Difference Calculator — worldClockly.com" },
       { name: "description", content: "Compare time between any two cities in the world. India vs USA, India vs UK, and any timezone pair, instantly." },
-      { property: "og:title", content: "Time Difference Calculator — Hourly.in" },
+      { property: "og:title", content: "Time Difference Calculator — worldClockly.com" },
       { property: "og:description", content: "Compare time across cities worldwide in real time." },
     ],
     links: [{ rel: "canonical", href: "/difference" }],
@@ -96,6 +96,99 @@ function DifferencePage() {
           <span className="font-semibold text-foreground">{diffStr}</span>{" "}
           {ib?.city}.
         </p>
+      </div>
+
+      <MeetingPlanner aTz={a} bTz={b} aCity={ia?.city ?? ""} bCity={ib?.city ?? ""} now={now} />
+
+      <div className="mt-8 rounded-2xl border border-border bg-card p-6">
+        <h2 className="font-display text-lg font-semibold">Quick conversions</h2>
+        <ul className="mt-3 grid gap-1 text-sm text-muted-foreground sm:grid-cols-2">
+          {[9, 12, 15, 18, 21].map((h) => {
+            const refDate = new Date(now);
+            refDate.setHours(h, 0, 0, 0);
+            const converted = getTimeInZone(b, refDate);
+            return (
+              <li key={h} className="rounded-lg border border-border bg-background px-3 py-2">
+                <span className="font-mono">{String(h).padStart(2, "0")}:00</span> in {ia?.city} →{" "}
+                <span className="font-mono text-foreground">{converted.hour}:{converted.minute}</span> in {ib?.city}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function MeetingPlanner({
+  aTz, bTz, aCity, bCity, now,
+}: {
+  aTz: string; bTz: string; aCity: string; bCity: string; now: Date;
+}) {
+  const hours = useMemo(() => {
+    const out: { aHour: number; bHour: number; bDay: string; aBusiness: boolean; bBusiness: boolean }[] = [];
+    const base = new Date(now);
+    base.setMinutes(0, 0, 0);
+    for (let i = 0; i < 24; i++) {
+      const d = new Date(base.getTime() + i * 3600_000);
+      const a = getTimeInZone(aTz, d);
+      const b = getTimeInZone(bTz, d);
+      const aH = parseInt(a.hour, 10);
+      const bH = parseInt(b.hour, 10);
+      out.push({
+        aHour: aH,
+        bHour: bH,
+        bDay: b.weekday.slice(0, 3),
+        aBusiness: aH >= 9 && aH < 18,
+        bBusiness: bH >= 9 && bH < 18,
+      });
+    }
+    return out;
+  }, [aTz, bTz, now]);
+
+  return (
+    <div className="mt-8 rounded-2xl border border-border bg-card p-6">
+      <h2 className="font-display text-lg font-semibold">Meeting planner — next 24h</h2>
+      <p className="mt-1 text-sm text-muted-foreground">
+        Green cells are business hours (09:00–18:00) in both cities.
+      </p>
+      <div className="mt-4 overflow-x-auto">
+        <table className="w-full min-w-[640px] text-sm">
+          <thead>
+            <tr className="text-xs uppercase tracking-wider text-muted-foreground">
+              <th className="py-2 text-left font-medium">{aCity}</th>
+              <th className="py-2 text-left font-medium">{bCity}</th>
+              <th className="py-2 text-left font-medium">Overlap</th>
+            </tr>
+          </thead>
+          <tbody>
+            {hours.map((h, i) => {
+              const both = h.aBusiness && h.bBusiness;
+              return (
+                <tr key={i} className="border-t border-border">
+                  <td className="py-1.5 font-mono">{String(h.aHour).padStart(2, "0")}:00</td>
+                  <td className="py-1.5 font-mono">
+                    {String(h.bHour).padStart(2, "0")}:00
+                    <span className="ml-2 text-xs text-muted-foreground">{h.bDay}</span>
+                  </td>
+                  <td className="py-1.5">
+                    <span
+                      className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ${
+                        both
+                          ? "bg-primary/15 text-primary"
+                          : h.aBusiness || h.bBusiness
+                          ? "bg-muted text-muted-foreground"
+                          : "bg-background text-muted-foreground/60"
+                      }`}
+                    >
+                      {both ? "✓ both working" : h.aBusiness ? `${aCity} only` : h.bBusiness ? `${bCity} only` : "off-hours"}
+                    </span>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );

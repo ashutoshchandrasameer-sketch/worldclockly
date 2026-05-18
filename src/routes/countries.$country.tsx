@@ -16,7 +16,7 @@ export const Route = createFileRoute("/countries/$country")({
     const c = loaderData?.country;
     if (!c) return {};
     const title = `Current Local Time in ${c.name} — Time Zones & Cities`;
-    const description = `Live local time in ${c.name}. ${c.about ?? ""} See current time across all ${c.name} time zones, major cities, UTC offset and public holidays on Hourly.in.`.trim();
+    const description = `Live local time in ${c.name}. ${c.about ?? ""} See current time across all ${c.name} time zones, major cities, UTC offset and public holidays on worldClockly.com.`.trim();
     const url = `/countries/${c.slug}`;
     return {
       meta: [
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/countries/$country")({
                   {
                     "@type": "Question",
                     name: `Does ${c.name} observe daylight saving time?`,
-                    acceptedAnswer: { "@type": "Answer", text: `Hourly.in uses the IANA time zone database, so any DST transitions for ${c.name} are reflected automatically in the clocks above.` },
+                    acceptedAnswer: { "@type": "Answer", text: `worldClockly.com uses the IANA time zone database, so any DST transitions for ${c.name} are reflected automatically in the clocks above.` },
                   },
                 ],
               },
@@ -201,7 +201,7 @@ function CountryPage() {
           {[
             { q: `What is the current time in ${country.name}?`, a: `${country.name} primarily uses the ${country.primaryTz} zone (${formatOffset(offset)}). The clock above updates every second, synced with your device.` },
             { q: `What time zone is ${country.name} in?`, a: `${country.name}'s primary IANA time zone is ${country.primaryTz}. ${country.about ?? ""}` },
-            { q: `Does ${country.name} observe daylight saving?`, a: `Hourly.in uses the IANA time zone database, so any DST changes for ${country.name} are reflected automatically.` },
+            { q: `Does ${country.name} observe daylight saving?`, a: `worldClockly.com uses the IANA time zone database, so any DST changes for ${country.name} are reflected automatically.` },
           ].map((f) => (
             <details key={f.q} className="group rounded-xl border border-border bg-card p-4">
               <summary className="cursor-pointer font-medium">{f.q}</summary>

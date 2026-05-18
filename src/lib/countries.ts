@@ -1,434 +1,88 @@
-import { CITIES, CityInfo } from "./cities";
+// Country registry for programmatic SEO routes (/countries/$country)
+import { CITIES, type CityInfo } from "./cities";
 
 export interface CountryInfo {
   slug: string;
   name: string;
-  code: string;
+  code: string; // ISO 3166-1 alpha-2
   flag: string;
   primaryTz: string;
-  capital: string;
-  about: string;
+  capital?: string; // city slug
+  about?: string;
 }
 
 export const COUNTRIES: CountryInfo[] = [
-  // Asia
-  {
-    slug: "india",
-    name: "India",
-    code: "IN",
-    flag: "🇮🇳",
-    primaryTz: "Asia/Kolkata",
-    capital: "new-delhi",
-    about: "India Standard Time (IST) is UTC+5:30 year-round with no daylight saving."
-  },
-  {
-    slug: "japan",
-    name: "Japan",
-    code: "JP",
-    flag: "🇯🇵",
-    primaryTz: "Asia/Tokyo",
-    capital: "tokyo",
-    about: "Japan Standard Time (JST) is UTC+9 year-round with no daylight saving."
-  },
-  {
-    slug: "south-korea",
-    name: "South Korea",
-    code: "KR",
-    flag: "🇰🇷",
-    primaryTz: "Asia/Seoul",
-    capital: "seoul",
-    about: "Korea Standard Time (KST) is UTC+9 year-round with no daylight saving."
-  },
-  {
-    slug: "china",
-    name: "China",
-    code: "CN",
-    flag: "🇨🇳",
-    primaryTz: "Asia/Shanghai",
-    capital: "beijing",
-    about: "China Standard Time (CST) is UTC+8 across the entire country."
-  },
-  {
-    slug: "singapore",
-    name: "Singapore",
-    code: "SG",
-    flag: "🇸🇬",
-    primaryTz: "Asia/Singapore",
-    capital: "singapore",
-    about: "Singapore Time (SGT) is UTC+8 year-round."
-  },
-  {
-    slug: "thailand",
-    name: "Thailand",
-    code: "TH",
-    flag: "🇹🇭",
-    primaryTz: "Asia/Bangkok",
-    capital: "bangkok",
-    about: "Thailand follows Indochina Time (ICT), UTC+7 year-round."
-  },
-  {
-    slug: "indonesia",
-    name: "Indonesia",
-    code: "ID",
-    flag: "🇮🇩",
-    primaryTz: "Asia/Jakarta",
-    capital: "jakarta",
-    about: "Indonesia spans multiple time zones, with Jakarta using WIB (UTC+7)."
-  },
-  {
-    slug: "philippines",
-    name: "Philippines",
-    code: "PH",
-    flag: "🇵🇭",
-    primaryTz: "Asia/Manila",
-    capital: "manila",
-    about: "Philippine Time (PHT) is UTC+8 year-round."
-  },
-  {
-    slug: "vietnam",
-    name: "Vietnam",
-    code: "VN",
-    flag: "🇻🇳",
-    primaryTz: "Asia/Ho_Chi_Minh",
-    capital: "ho-chi-minh-city",
-    about: "Vietnam uses Indochina Time (ICT), UTC+7 year-round."
-  },
-  {
-    slug: "malaysia",
-    name: "Malaysia",
-    code: "MY",
-    flag: "🇲🇾",
-    primaryTz: "Asia/Kuala_Lumpur",
-    capital: "kuala-lumpur",
-    about: "Malaysia Time (MYT) is UTC+8 year-round."
-  },
-  {
-    slug: "pakistan",
-    name: "Pakistan",
-    code: "PK",
-    flag: "🇵🇰",
-    primaryTz: "Asia/Karachi",
-    capital: "karachi",
-    about: "Pakistan Standard Time (PKT) is UTC+5 year-round."
-  },
-  {
-    slug: "bangladesh",
-    name: "Bangladesh",
-    code: "BD",
-    flag: "🇧🇩",
-    primaryTz: "Asia/Dhaka",
-    capital: "dhaka",
-    about: "Bangladesh Standard Time (BST) is UTC+6 year-round."
-  },
-  {
-    slug: "sri-lanka",
-    name: "Sri Lanka",
-    code: "LK",
-    flag: "🇱🇰",
-    primaryTz: "Asia/Colombo",
-    capital: "colombo",
-    about: "Sri Lanka Standard Time is UTC+5:30 year-round."
-  },
-  {
-    slug: "nepal",
-    name: "Nepal",
-    code: "NP",
-    flag: "🇳🇵",
-    primaryTz: "Asia/Kathmandu",
-    capital: "kathmandu",
-    about: "Nepal Time (NPT) is UTC+5:45 year-round."
-  },
+{ slug: "italy", name: "Italy", code: "IT", flag: "🇮🇹", primaryTz: "Europe/Rome", capital: "rome", about: "Italy observes Central European Time (CET, UTC+1) and Central European Summer Time (CEST, UTC+2) during summer." },
+{ slug: "canada", name: "Canada", code: "CA", flag: "🇨🇦", primaryTz: "America/Toronto", capital: "toronto", about: "Canada spans six primary time zones from Pacific to Atlantic, with most provinces observing daylight saving time." },
+{ slug: "spain", name: "Spain", code: "ES", flag: "🇪🇸", primaryTz: "Europe/Madrid", capital: "madrid", about: "Mainland Spain follows Central European Time despite its western geography and observes daylight saving time." },
 
-  // Middle East
-  {
-    slug: "united-arab-emirates",
-    name: "United Arab Emirates",
-    code: "AE",
-    flag: "🇦🇪",
-    primaryTz: "Asia/Dubai",
-    capital: "abu-dhabi",
-    about: "Gulf Standard Time (GST) is UTC+4 year-round."
-  },
-  {
-    slug: "saudi-arabia",
-    name: "Saudi Arabia",
-    code: "SA",
-    flag: "🇸🇦",
-    primaryTz: "Asia/Riyadh",
-    capital: "riyadh",
-    about: "Arabia Standard Time (AST) is UTC+3 year-round."
-  },
-  {
-    slug: "qatar",
-    name: "Qatar",
-    code: "QA",
-    flag: "🇶🇦",
-    primaryTz: "Asia/Qatar",
-    capital: "doha",
-    about: "Qatar Standard Time is UTC+3 year-round."
-  },
-  {
-    slug: "kuwait",
-    name: "Kuwait",
-    code: "KW",
-    flag: "🇰🇼",
-    primaryTz: "Asia/Kuwait",
-    capital: "kuwait-city",
-    about: "Kuwait follows Arabia Standard Time (AST), UTC+3."
-  },
+{ slug: "netherlands", name: "Netherlands", code: "NL", flag: "🇳🇱", primaryTz: "Europe/Amsterdam", capital: "amsterdam", about: "The Netherlands uses Central European Time (CET) and shifts to CEST during summer." },
 
-  // Europe
-  {
-    slug: "united-kingdom",
-    name: "United Kingdom",
-    code: "GB",
-    flag: "🇬🇧",
-    primaryTz: "Europe/London",
-    capital: "london",
-    about: "The UK follows GMT in winter and BST (UTC+1) during daylight saving."
-  },
-  {
-    slug: "france",
-    name: "France",
-    code: "FR",
-    flag: "🇫🇷",
-    primaryTz: "Europe/Paris",
-    capital: "paris",
-    about: "France uses Central European Time (CET) and observes daylight saving."
-  },
-  {
-    slug: "germany",
-    name: "Germany",
-    code: "DE",
-    flag: "🇩🇪",
-    primaryTz: "Europe/Berlin",
-    capital: "berlin",
-    about: "Germany follows CET and switches to CEST during daylight saving."
-  },
-  {
-    slug: "spain",
-    name: "Spain",
-    code: "ES",
-    flag: "🇪🇸",
-    primaryTz: "Europe/Madrid",
-    capital: "madrid",
-    about: "Spain follows CET and observes daylight saving time."
-  },
-  {
-    slug: "italy",
-    name: "Italy",
-    code: "IT",
-    flag: "🇮🇹",
-    primaryTz: "Europe/Rome",
-    capital: "rome",
-    about: "Italy follows Central European Time with daylight saving adjustments."
-  },
-  {
-    slug: "netherlands",
-    name: "Netherlands",
-    code: "NL",
-    flag: "🇳🇱",
-    primaryTz: "Europe/Amsterdam",
-    capital: "amsterdam",
-    about: "The Netherlands uses CET and switches to CEST during daylight saving."
-  },
-  {
-    slug: "austria",
-    name: "Austria",
-    code: "AT",
-    flag: "🇦🇹",
-    primaryTz: "Europe/Vienna",
-    capital: "vienna",
-    about: "Austria follows Central European Time with daylight saving."
-  },
-  {
-    slug: "switzerland",
-    name: "Switzerland",
-    code: "CH",
-    flag: "🇨🇭",
-    primaryTz: "Europe/Zurich",
-    capital: "zurich",
-    about: "Switzerland follows CET and observes daylight saving."
-  },
-  {
-    slug: "sweden",
-    name: "Sweden",
-    code: "SE",
-    flag: "🇸🇪",
-    primaryTz: "Europe/Stockholm",
-    capital: "stockholm",
-    about: "Sweden follows CET and observes daylight saving time."
-  },
-  {
-    slug: "ireland",
-    name: "Ireland",
-    code: "IE",
-    flag: "🇮🇪",
-    primaryTz: "Europe/Dublin",
-    capital: "dublin",
-    about: "Ireland uses GMT in winter and Irish Standard Time during summer."
-  },
-  {
-    slug: "portugal",
-    name: "Portugal",
-    code: "PT",
-    flag: "🇵🇹",
-    primaryTz: "Europe/Lisbon",
-    capital: "lisbon",
-    about: "Portugal follows Western European Time and observes daylight saving."
-  },
-  {
-    slug: "czech-republic",
-    name: "Czech Republic",
-    code: "CZ",
-    flag: "🇨🇿",
-    primaryTz: "Europe/Prague",
-    capital: "prague",
-    about: "The Czech Republic follows CET with daylight saving adjustments."
-  },
-  {
-    slug: "turkey",
-    name: "Turkey",
-    code: "TR",
-    flag: "🇹🇷",
-    primaryTz: "Europe/Istanbul",
-    capital: "istanbul",
-    about: "Turkey Time (TRT) is UTC+3 year-round."
-  },
-  {
-    slug: "russia",
-    name: "Russia",
-    code: "RU",
-    flag: "🇷🇺",
-    primaryTz: "Europe/Moscow",
-    capital: "moscow",
-    about: "Russia spans multiple time zones, with Moscow Time at UTC+3."
-  },
+{ slug: "belgium", name: "Belgium", code: "BE", flag: "🇧🇪", primaryTz: "Europe/Brussels", capital: "brussels", about: "Belgium observes Central European Time (CET, UTC+1) and daylight saving during summer months." },
 
-  // North America
-  {
-    slug: "united-states",
-    name: "United States",
-    code: "US",
-    flag: "🇺🇸",
-    primaryTz: "America/New_York",
-    capital: "new-york",
-    about: "The United States spans multiple time zones and observes daylight saving in most regions."
-  },
-  {
-    slug: "canada",
-    name: "Canada",
-    code: "CA",
-    flag: "🇨🇦",
-    primaryTz: "Amera/Toronto",
-    capital: "toronto",
-    about: "Canada spans multiple time zones with daylight saving observed in most provinces."
-  },
-  {
-    slug: "canada",
-    name: "Canada",
-    code: "CA",
-    flag: "🇨🇦",
-    primaryTz: "America/Montreal",
-    capital: "Quebec City",
-    about: "Canada spans multiple time zones with daylight saving observed in most provinces."
-  },
-  {
-    slug: "mexico",
-    name: "Mexico",
-    code: "MX",
-    flag: "🇲🇽",
-    primaryTz: "America/Mexico_City",
-    capital: "mexico-city",
-    about: "Mexico spans multiple time zones with regional daylight saving policies."
-  },
+{ slug: "austria", name: "Austria", code: "AT", flag: "🇦🇹", primaryTz: "Europe/Vienna", capital: "vienna", about: "Austria follows Central European Time and observes daylight saving as CEST." },
 
-  // South America
-  {
-    slug: "brazil",
-    name: "Brazil",
-    code: "BR",
-    flag: "🇧🇷",
-    primaryTz: "America/Sao_Paulo",
-    capital: "sao-paulo",
-    about: "Brazil spans multiple time zones, with São Paulo using UTC−3."
-  },
-  {
-    slug: "argentina",
-    name: "Argentina",
-    code: "AR",
-    flag: "🇦🇷",
-    primaryTz: "America/Argentina/Buenos_Aires",
-    capital: "buenos-aires",
-    about: "Argentina Time (ART) is UTC−3 year-round."
-  },
-  {
-    slug: "chile",
-    name: "Chile",
-    code: "CL",
-    flag: "🇨🇱",
-    primaryTz: "America/Santiago",
-    capital: "santiago",
-    about: "Chile observes daylight saving time in many regions."
-  },
+{ slug: "switzerland", name: "Switzerland", code: "CH", flag: "🇨🇭", primaryTz: "Europe/Zurich", capital: "zurich", about: "Switzerland uses Central European Time (CET) with daylight saving transitions to CEST." },
 
-  // Africa
-  {
-    slug: "egypt",
-    name: "Egypt",
-    code: "EG",
-    flag: "🇪🇬",
-    primaryTz: "Africa/Cairo",
-    capital: "cairo",
-    about: "Egypt Standard Time (EET) is UTC+2 with seasonal daylight saving."
-  },
-  {
-    slug: "nigeria",
-    name: "Nigeria",
-    code: "NG",
-    flag: "🇳🇬",
-    primaryTz: "Africa/Lagos",
-    capital: "lagos",
-    about: "West Africa Time (WAT) is UTC+1 year-round."
-  },
-  {
-    slug: "kenya",
-    name: "Kenya",
-    code: "KE",
-    flag: "🇰🇪",
-    primaryTz: "Africa/Nairobi",
-    capital: "nairobi",
-    about: "East Africa Time (EAT) is UTC+3 year-round."
-  },
-  {
-    slug: "south-africa",
-    name: "South Africa",
-    code: "ZA",
-    flag: "🇿🇦",
-    primaryTz: "Africa/Johannesburg",
-    capital: "johannesburg",
-    about: "South Africa Standard Time (SAST) is UTC+2 year-round."
-  },
+{ slug: "sweden", name: "Sweden", code: "SE", flag: "🇸🇪", primaryTz: "Europe/Stockholm", capital: "stockholm", about: "Sweden observes Central European Time and advances clocks during summer." },
 
-  // Oceania
-  {
-    slug: "australia",
-    name: "Australia",
-    code: "AU",
-    flag: "🇦🇺",
-    primaryTz: "Australia/Sydney",
-    capital: "sydney",
-    about: "Australia spans multiple time zones with daylight saving in several states."
-  },
-  {
-    slug: "new-zealand",
-    name: "New Zealand",
-    code: "NZ",
-    flag: "🇳🇿",
-    primaryTz: "Pacific/Auckland",
-    capital: "auckland",
-    about: "New Zealand Standard Time is UTC+12, shifting to NZDT (UTC+13) during daylight saving."
-  }
+{ slug: "norway", name: "Norway", code: "NO", flag: "🇳🇴", primaryTz: "Europe/Oslo", capital: "oslo", about: "Norway uses Central European Time and observes daylight saving time." },
+
+{ slug: "finland", name: "Finland", code: "FI", flag: "🇫🇮", primaryTz: "Europe/Helsinki", capital: "helsinki", about: "Finland follows Eastern European Time (EET, UTC+2) and daylight saving in summer." },
+
+{ slug: "denmark", name: "Denmark", code: "DK", flag: "🇩🇰", primaryTz: "Europe/Copenhagen", capital: "copenhagen", about: "Denmark uses Central European Time and observes daylight saving time." },
+
+{ slug: "greece", name: "Greece", code: "GR", flag: "🇬🇷", primaryTz: "Europe/Athens", capital: "athens", about: "Greece follows Eastern European Time (EET) with summer daylight saving adjustments." },
+
+{ slug: "poland", name: "Poland", code: "PL", flag: "🇵🇱", primaryTz: "Europe/Warsaw", capital: "warsaw", about: "Poland observes Central European Time and daylight saving as CEST." },
+
+{ slug: "czech-republic", name: "Czech Republic", code: "CZ", flag: "🇨🇿", primaryTz: "Europe/Prague", capital: "prague", about: "The Czech Republic uses Central European Time with daylight saving during summer." },
+
+{ slug: "hungary", name: "Hungary", code: "HU", flag: "🇭🇺", primaryTz: "Europe/Budapest", capital: "budapest", about: "Hungary follows Central European Time and observes summer daylight saving." },
+
+{ slug: "portugal", name: "Portugal", code: "PT", flag: "🇵🇹", primaryTz: "Europe/Lisbon", capital: "lisbon", about: "Portugal uses Western European Time (WET) and shifts to WEST during daylight saving." },
+
+{ slug: "ireland", name: "Ireland", code: "IE", flag: "🇮🇪", primaryTz: "Europe/Dublin", capital: "dublin", about: "Ireland uses GMT in winter and Irish Standard Time (UTC+1) during summer." },
+
+{ slug: "argentina", name: "Argentina", code: "AR", flag: "🇦🇷", primaryTz: "America/Argentina/Buenos_Aires", capital: "buenos-aires", about: "Argentina Standard Time (ART) is UTC-3 year-round with no daylight saving." },
+
+{ slug: "peru", name: "Peru", code: "PE", flag: "🇵🇪", primaryTz: "America/Lima", capital: "lima", about: "Peru Time (PET) is UTC-5 year-round without daylight saving." },
+
+{ slug: "colombia", name: "Colombia", code: "CO", flag: "🇨🇴", primaryTz: "America/Bogota", capital: "bogota", about: "Colombia Standard Time is UTC-5 year-round." },
+
+{ slug: "chile", name: "Chile", code: "CL", flag: "🇨🇱", primaryTz: "America/Santiago", capital: "santiago", about: "Chile observes Chile Standard Time and daylight saving changes seasonally." },
+
+{ slug: "indonesia", name: "Indonesia", code: "ID", flag: "🇮🇩", primaryTz: "Asia/Jakarta", capital: "jakarta", about: "Indonesia spans three time zones from UTC+7 to UTC+9 across its islands." },
+
+{ slug: "philippines", name: "Philippines", code: "PH", flag: "🇵🇭", primaryTz: "Asia/Manila", capital: "manila", about: "Philippine Time (PHT) is UTC+8 year-round with no daylight saving." },
+
+{ slug: "vietnam", name: "Vietnam", code: "VN", flag: "🇻🇳", primaryTz: "Asia/Ho_Chi_Minh", capital: "hanoi", about: "Vietnam uses Indochina Time (ICT, UTC+7) year-round." },
+
+{ slug: "malaysia", name: "Malaysia", code: "MY", flag: "🇲🇾", primaryTz: "Asia/Kuala_Lumpur", capital: "kuala-lumpur", about: "Malaysia Time (MYT) is UTC+8 year-round across Peninsular and East Malaysia." },
+
+{ slug: "qatar", name: "Qatar", code: "QA", flag: "🇶🇦", primaryTz: "Asia/Qatar", capital: "doha", about: "Qatar Standard Time is UTC+3 year-round without daylight saving." },
+
+{ slug: "kuwait", name: "Kuwait", code: "KW", flag: "🇰🇼", primaryTz: "Asia/Kuwait", capital: "kuwait-city", about: "Kuwait follows Arabia Standard Time (UTC+3) year-round." },
+
+{ slug: "iran", name: "Iran", code: "IR", flag: "🇮🇷", primaryTz: "Asia/Tehran", capital: "tehran", about: "Iran Standard Time is UTC+3:30; daylight saving was abolished in 2022." },
+
+{ slug: "iraq", name: "Iraq", code: "IQ", flag: "🇮🇶", primaryTz: "Asia/Baghdad", capital: "baghdad", about: "Iraq observes Arabia Standard Time (UTC+3) year-round." },
+
+{ slug: "kenya", name: "Kenya", code: "KE", flag: "🇰🇪", primaryTz: "Africa/Nairobi", capital: "nairobi", about: "East Africa Time (EAT) is UTC+3 year-round in Kenya." },
+
+{ slug: "nigeria", name: "Nigeria", code: "NG", flag: "🇳🇬", primaryTz: "Africa/Lagos", capital: "lagos", about: "Nigeria follows West Africa Time (WAT, UTC+1) year-round." },
+
+{ slug: "morocco", name: "Morocco", code: "MA", flag: "🇲🇦", primaryTz: "Africa/Casablanca", capital: "casablanca", about: "Morocco primarily observes UTC+1 year-round except temporary Ramadan adjustments." },
+
+{ slug: "algeria", name: "Algeria", code: "DZ", flag: "🇩🇿", primaryTz: "Africa/Algiers", capital: "algiers", about: "Algeria uses Central European Time (UTC+1) throughout the year." },
+
+{ slug: "mexico", name: "Mexico", code: "MX", flag: "🇲🇽", primaryTz: "America/Mexico_City", capital: "mexico-city", about: "Mexico spans multiple time zones, with most regions ending daylight saving time in recent years." },
+
+{ slug: "australia", name: "Australia", code: "AU", flag: "🇦🇺", primaryTz: "Australia/Sydney", capital: "sydney", about: "Australia spans several time zones, with some states observing daylight saving while others do not." },
+
+{ slug: "brazil", name: "Brazil", code: "BR", flag: "🇧🇷", primaryTz: "America/Sao_Paulo", capital: "sao-paulo", about: "Brazil spans multiple time zones and no longer observes daylight saving time nationally." },
+
+{ slug: "iran", name: "Iran", code: "IR", flag: "🇮🇷", primaryTz: "Asia/Tehran", capital: "tehran", about: "Iran uses Iran Standard Time (IRST, UTC+3:30) throughout the year." }
 ];
 
 export function getCountryBySlug(slug: string): CountryInfo | undefined {
@@ -439,8 +93,8 @@ export function getCountryByCode(code: string): CountryInfo | undefined {
   return COUNTRIES.find((c) => c.code === code);
 }
 
-export function getCitiesInCountry(code: string): CityInfo[] { 
-  return CITIES.filter((c: { countryCode: string }) => c.countryCode === code);
+export function getCitiesInCountry(code: string): CityInfo[] {
+  return CITIES.filter((c) => c.countryCode === code);
 }
 
 export function getUniqueTimezonesInCountry(code: string): string[] {
@@ -448,4 +102,3 @@ export function getUniqueTimezonesInCountry(code: string): string[] {
   for (const c of CITIES) if (c.countryCode === code) tzs.add(c.tz);
   return Array.from(tzs);
 }
-

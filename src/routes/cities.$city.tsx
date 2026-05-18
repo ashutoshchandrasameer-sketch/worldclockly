@@ -16,7 +16,7 @@ export const Route = createFileRoute("/cities/$city")({
     const c = loaderData?.city;
     if (!c) return {};
     const title = `Time in ${c.city}, ${c.country} — Current Local Time`;
-    const description = `Exact current time in ${c.city}, ${c.country}. Live clock, UTC offset, sunrise & sunset, and time zone (${c.tz}). Atomic-accurate via Hourly.in.`;
+    const description = `Exact current time in ${c.city}, ${c.country}. Live clock, UTC offset, sunrise & sunset, and time zone (${c.tz}). Atomic-accurate via worldClockly.com.`;
     const url = `/cities/${c.slug}`;
     return {
       meta: [
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/cities/$city")({
                   {
                     "@type": "Question",
                     name: `What is the current time in ${c.city}?`,
-                    acceptedAnswer: { "@type": "Answer", text: `${c.city} uses the ${c.tz} time zone. Hourly.in displays the exact local time, synchronized with your device clock.` },
+                    acceptedAnswer: { "@type": "Answer", text: `${c.city} uses the ${c.tz} time zone. worldClockly.com displays the exact local time, synchronized with your device clock.` },
                   },
                   {
                     "@type": "Question",
@@ -120,7 +120,7 @@ function CityPage() {
 
   const share = async () => {
     const url = typeof window !== "undefined" ? window.location.href : `/cities/${city.slug}`;
-    const text = `It's ${time.hour}:${time.minute} in ${city.city} right now — Hourly.in`;
+    const text = `It's ${time.hour}:${time.minute} in ${city.city} right now — worldClockly.com`;
     if (typeof navigator !== "undefined" && (navigator as Navigator & { share?: (d: ShareData) => Promise<void> }).share) {
       try {
         await (navigator as Navigator & { share: (d: ShareData) => Promise<void> }).share({ title: `Time in ${city.city}`, text, url });
@@ -197,7 +197,7 @@ function CityPage() {
         <div className="mt-8 space-y-3">
           {[
             { q: `What is the current time in ${city.city}?`, a: `${city.city} is in the ${city.tz} zone (${formatOffset(offset)}). The clock at the top of this page updates every second, synced with your device.` },
-            { q: `Does ${city.city} observe Daylight Saving Time?`, a: `Hourly.in uses the IANA time zone database, so any DST changes for ${city.city} are reflected automatically.` },
+            { q: `Does ${city.city} observe Daylight Saving Time?`, a: `worldClockly.com uses the IANA time zone database, so any DST changes for ${city.city} are reflected automatically.` },
             { q: `How far is ${city.city} from UTC?`, a: `${city.city} is currently ${formatOffset(offset)} from Coordinated Universal Time.` },
           ].map((f) => (
             <details key={f.q} className="group rounded-xl border border-border bg-card p-4">
