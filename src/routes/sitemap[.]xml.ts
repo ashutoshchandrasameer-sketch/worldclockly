@@ -3,7 +3,7 @@ import type {} from "@tanstack/react-start";
 import { CITIES } from "@/lib/cities";
 import { COUNTRIES } from "@/lib/countries";
 
-const BASE_URL = "";
+const BASE_URL = "https://worldclockly.com";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
