@@ -13,7 +13,7 @@ export interface CityInfo {
 }
 
 export const CITIES: CityInfo[] = [
-  { slug: "new-delhi", city: "New-Delhi", country: "India", countryCode: "IN", tz: "Asia/Kolkata", flag: "🇮🇳", lat: 28.7041, lon: 77.1025, population: 33000000 },
+  { slug: "new delhi", city: "New Delhi", country: "India", countryCode: "IN", tz: "Asia/Kolkata", flag: "🇮🇳", lat: 28.7041, lon: 77.1025, population: 33000000 },
   { slug: "mumbai", city: "Mumbai", country: "India", countryCode: "IN", tz: "Asia/Kolkata", flag: "🇮🇳", lat: 19.076, lon: 72.8777, population: 20400000 },
   { slug: "bengaluru", city: "Bengaluru", country: "India", countryCode: "IN", tz: "Asia/Kolkata", flag: "🇮🇳", lat: 12.9716, lon: 77.5946, population: 13600000 },
   { slug: "hyderabad", city: "Hyderabad", country: "India", countryCode: "IN", tz: "Asia/Kolkata", flag: "🇮🇳", lat: 17.385, lon: 78.4867, population: 10600000 },

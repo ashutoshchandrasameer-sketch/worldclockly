@@ -50,7 +50,7 @@ export const COUNTRIES: CountryInfo[] = [
 { slug: "peru", name: "Peru", code: "PE", flag: "🇵🇪", primaryTz: "America/Lima", capital: "lima", about: "Peru Time (PET) is UTC-5 year-round without daylight saving." },
 
 { slug: "colombia", name: "Colombia", code: "CO", flag: "🇨🇴", primaryTz: "America/Bogota", capital: "bogota", about: "Colombia Standard Time is UTC-5 year-round." },
-
+{ slug: "india", name: "India", code: "IN", flag: "🇮🇳", primaryTz: "Asia/Kolkata", capital: "new-delhi",about: "India follows Indian Standard Time (IST), which is UTC+5:30 throughout the year with no daylight saving changes."},
 { slug: "chile", name: "Chile", code: "CL", flag: "🇨🇱", primaryTz: "America/Santiago", capital: "santiago", about: "Chile observes Chile Standard Time and daylight saving changes seasonally." },
 
 { slug: "indonesia", name: "Indonesia", code: "ID", flag: "🇮🇩", primaryTz: "Asia/Jakarta", capital: "jakarta", about: "Indonesia spans three time zones from UTC+7 to UTC+9 across its islands." },
