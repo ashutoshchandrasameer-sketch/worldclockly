@@ -91,12 +91,10 @@ export const TIMEZONES: TimezoneInfo[] = [
   { city: "Islamabad", country: "Pakistan", tz: "Asia/Karachi", flag: "🇵🇰" },
 
   { city: "Dhaka", country: "Bangladesh", tz: "Asia/Dhaka", flag: "🇧🇩" },
-
+  { city: "colombo", country: "Sri Lanka", tz: "Asia/Colombo", flag: "🇱🇰"},
   { city: "Sydney", country: "Australia", tz: "Australia/Sydney", flag: "🇦🇺" },
   { city: "Melbourne", country: "Australia", tz: "Australia/Melbourne", flag: "🇦🇺" },
-
   { city: "Auckland", country: "New Zealand", tz: "Pacific/Auckland", flag: "🇳🇿" },
-
   { city: "Toronto", country: "Canada", tz: "America/Toronto", flag: "🇨🇦" },
   { city: "Montreal", country: "Canada", tz: "America/Toronto", flag: "🇨🇦" },
   { city: "Vancouver", country: "Canada", tz: "America/Vancouver", flag: "🇨🇦" },

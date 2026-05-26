@@ -15,9 +15,7 @@ export const COUNTRIES: CountryInfo[] = [
 { slug: "italy", name: "Italy", code: "IT", flag: "🇮🇹", primaryTz: "Europe/Rome", capital: "rome", about: "Italy observes Central European Time (CET, UTC+1) and Central European Summer Time (CEST, UTC+2) during summer." },
 { slug: "canada", name: "Canada", code: "CA", flag: "🇨🇦", primaryTz: "America/Toronto", capital: "toronto", about: "Canada spans six primary time zones from Pacific to Atlantic, with most provinces observing daylight saving time." },
 { slug: "spain", name: "Spain", code: "ES", flag: "🇪🇸", primaryTz: "Europe/Madrid", capital: "madrid", about: "Mainland Spain follows Central European Time despite its western geography and observes daylight saving time." },
-
 { slug: "netherlands", name: "Netherlands", code: "NL", flag: "🇳🇱", primaryTz: "Europe/Amsterdam", capital: "amsterdam", about: "The Netherlands uses Central European Time (CET) and shifts to CEST during summer." },
-
 { slug: "belgium", name: "Belgium", code: "BE", flag: "🇧🇪", primaryTz: "Europe/Brussels", capital: "brussels", about: "Belgium observes Central European Time (CET, UTC+1) and daylight saving during summer months." },
 
 { slug: "austria", name: "Austria", code: "AT", flag: "🇦🇹", primaryTz: "Europe/Vienna", capital: "vienna", about: "Austria follows Central European Time and observes daylight saving as CEST." },
@@ -25,7 +23,8 @@ export const COUNTRIES: CountryInfo[] = [
 { slug: "switzerland", name: "Switzerland", code: "CH", flag: "🇨🇭", primaryTz: "Europe/Zurich", capital: "zurich", about: "Switzerland uses Central European Time (CET) with daylight saving transitions to CEST." },
 
 { slug: "sweden", name: "Sweden", code: "SE", flag: "🇸🇪", primaryTz: "Europe/Stockholm", capital: "stockholm", about: "Sweden observes Central European Time and advances clocks during summer." },
-
+{ slug: "pakistan",  name: "Pakistan",  code: "PK", flag: "🇵🇰",  primaryTz: "Asia/Karachi",  capital: "islamabad",about: "Pakistan follows Pakistan Standard Time (PKT) throughout the year without daylight saving time."},
+{slug: "sri-lanka", name: "Sri Lanka", code: "LK",  flag: "🇱🇰",   primaryTz: "Asia/Colombo",   capital: "colombo", about: "Sri Lanka follows Sri Lanka Standard Time (SLST), which is UTC+5:30 throughout the year without daylight saving time."},
 { slug: "norway", name: "Norway", code: "NO", flag: "🇳🇴", primaryTz: "Europe/Oslo", capital: "oslo", about: "Norway uses Central European Time and observes daylight saving time." },
 
 { slug: "finland", name: "Finland", code: "FI", flag: "🇫🇮", primaryTz: "Europe/Helsinki", capital: "helsinki", about: "Finland follows Eastern European Time (EET, UTC+2) and daylight saving in summer." },
