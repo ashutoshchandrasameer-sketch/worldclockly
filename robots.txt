@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://worldclockly.com/sitemap.xml

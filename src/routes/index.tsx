@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       { title: "worldClockly.com — Exact Time Now in India & The World" },
       { name: "description", content: "Atomic-accurate Indian Standard Time, world clocks, time zones, sunrise/sunset and countdowns. India's most trusted time utility." },
       { property: "og:title", content: "worldClockly.com — Exact Time Now" },
-      { property: "og:description", content: "Live IST clock, world time, holidays and countdowns. Fast. Free. Accurate." },
+      { property: "og:description", content: "World Clock Time, Time and Date, Sunrise, Sunset, holidays and countdowns. Fast. Free. Accurate." },
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -107,7 +107,7 @@ function Home() {
       <section className="relative mx-auto max-w-6xl px-4 pt-12 pb-8 md:pt-16">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
           <div className="text-center md:text-left">
-            <h1 className="sr-only">Indian Standard Time & World Clock — Exact Time Now</h1>
+            <h1 className="sr-only">World Clock — Accurate Time Now</h1>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">
               {greet} • {selectedInfo?.flag} {selectedInfo?.city ?? selectedTz}
             </p>
@@ -238,7 +238,6 @@ function Home() {
           })}
         </div>
       </section>
-
     </div>
   );
 }
